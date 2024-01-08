@@ -1,0 +1,84 @@
+/* Stylar behållaren i sidans första kolumnen*/
+.slider-container {
+    margin-top: 20px;
+    margin-left: 10px;
+    border: 1px solid white;
+    height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Lägger till en pekare till elementet med id"dreams" */
+  #dreams {
+    cursor: pointer;
+
+  }
+
+  /* Stylar innehållet för med toggle funktionen */
+  .dreamsContent {
+    text-align: center;
+  }
+
+  /* Stylar label elementen som tillhör en slider */
+  .slider-label {
+    margin: 10px;
+    font-weight: bolder;
+  }
+
+  /* Skapar en rundad kant på samtliga input rutor */
+  input {
+    border-radius: 6px;
+  }
+
+  /* Stylar den valbara listan */
+  #selectable {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    font-size: small;
+    padding-top: 0;
+
+  }
+
+  /* Stylar varje listelement i den valbara listan */
+  #selectable li {
+    box-shadow: 2px 3px 3px 1px;
+    text-align: center;
+    width: 80%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+    background: white;
+    opacity: 60%;
+  }
+
+  /* Stylar listelement som håller på att väljas */
+  #selectable .ui-selecting {
+    background: #f1f2ef;
+    opacity: 50%;
+  }
+
+  /* Stylar valda listelement */
+  #selectable .ui-selected {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: white;
+  }
+
+  /* Stylar Submit knappen */
+  .sub-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: green;
+    opacity: 60%;
+    color: #fff;
+    font-weight: bolder;
+    box-shadow: 2px 3px 5px 3px grey;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }

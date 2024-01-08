@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive mall 4.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/CSS/myCustom.css">
+  <link rel="stylesheet" href="/CSS/myStyle.css">
+  <link rel="stylesheet" href="/CSS/home.css">
+  <script src="/javascript/myCustomJs.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="myjQuery/jQueryUI-home.js"></script> <!-- Hämtar mitt script -->
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="travelplanner.html">Travelplanner</a>
+    <a href="cities.html">Cities Bucketlist</a>
+    <a href="favorites1.html">Favorites 1</a>
+    <a href="favorites2.html">Favorites 2</a>
+    <a href="contact.html">Contact</a>
+    <a href="moment4.html">Contact Form</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="w3-container w3-black w3-opacity">
+    <h1>Your City travel guide</h1>
+    <p>Click on a photo to read about the city</p>
+  </div>
+  <br>
+  <div id="terms-dialog" title="Terms and Conditions">
+    <!-- Skriver ut Terms and conditions i en dialogruta -->
+    <div id="terms-dialog-content" style="color: red;">
+      <p>
+      <h1>Privacy Policy</h1>
+      <h4>This is nn:s homepage. This privacy policy will explain how my homepage uses the personal data&nbsp;we collect
+        from you when you use my website.</h4>
+      <h3>Topics:</h3>
+      <ul>
+        <li>What data do we&nbsp;collect?</li>
+        <li>How do&nbsp;we collect your data?</li>
+        <li>How will&nbsp;we use your data?</li>
+        <li>Marketing</li>
+        <li>What are your data protection rights?</li>
+        <li>What are cookies?</li>
+        <li>How do we use cookies?</li>
+        <li>What types of cookies do we use?</li>
+        <li>How to manage your cookies</li>
+        <li>Privacy policies of other websites</li>
+        <li>Changes to our privacy policy</li>
+        <li>How to contact us</li>
+        <li>How to contact the appropriate authorities</li>
+      </ul>
+      <h3>What data do&nbsp;we&nbsp;&nbsp;collect?</h3>
+      <p>My homepage collect the following data:</p>
+      <ul>
+        <li>Personal identification information (Name, email address, phone number, etc.)</li>
+      </ul>
+      <h3>How do we collect your data?</h3>
+      <p>You directly provide most of the data&nbsp;my homepage collect.&nbsp;We collect data and process data when you:
+      </p>
+      <ul>
+        <li>Voluntarily provide feedback via email.</li>
+        <li>Use or view our website via your browser&rsquo;s cookies.</li>
+      </ul>
+      <p>We&nbsp;may also receive your data indirectly from the&nbsp;Google Analytics.</p>
+      <h3>How will we use your data?</h3>
+      <p>We collects your data so that I can respond on your Email.</p>
+      <h3>Marketing</h3>
+      <p>Currently we don't conducts any marketing activities on this site.</p>
+      <h3>What are your data protection rights?</h3>
+      <p>We&nbsp;would like to make sure you are fully aware of all of your data protection rights. Every user is
+        entitled to the following:</p>
+      <p><strong>The right to access</strong>&nbsp;&ndash; You have the right to request us for copies of your personal
+        data. We may charge you a small fee for this service.</p>
+      <p><strong>The right to rectification</strong>&nbsp;&ndash; You have the right to request that we correct any
+        information you believe is inaccurate. You also have the right to request us to complete the information you
+        believe is incomplete.</p>
+      <p><strong>The right to erasure</strong>&nbsp;&ndash; You have the right to request that we erase your personal
+        data, under certain conditions.</p>
+      <p><strong>The right to restrict processing</strong>&nbsp;&ndash; You have the right to request that we restrict
+        the processing of your personal data, under certain conditions.</p>
+      <p><strong>The right to object to processing</strong>&nbsp;&ndash; You have the right to object to
+        our&nbsp;processing of your personal data, under certain conditions.</p>
+      <p><strong>The right to data portability</strong>&nbsp;&ndash; You have the right to request that we transfer the
+        data that we have collected to another organization, or directly to you, under certain conditions.</p>
+      <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights,
+        please contact us at our email: nn@nn.com</p>
+      <p>&nbsp;</p>
+      <h3>Cookies</h3>
+      <p>Cookies are text files placed on your computer to collect standard Internet log information and visitor
+        behavior information. When you visit our websites, we may collect information from you automatically through
+        cookies or similar technology.</p>
+      <p>For further information, visit allaboutcookies.org.</p>
+      <h3>How do we use cookies?</h3>
+      <p>My webpage uses cookies to improve your experience on my website&nbsp;and to understand how you use&nbsp;my
+        website.</p>
+      <h3>What types of cookies do we use?</h3>
+      <p>There are a number of different types of cookies, however, our website uses cookies so that we recognize you on
+        our website and remember your previously selected preferences. These could include what language you prefer and
+        location you are in. A mix of first-party and third-party cookies are used.</p>
+      <h3>How to manage cookies</h3>
+      <p>You can set your browser not to accept cookies, and the above website tells you how to remove cookies from your
+        browser. However, in a few cases, some of our website features may not function as a result.</p>
+      <h3>Privacy policies of other websites</h3>
+      <p>Our website contains links to other websites. Our privacy policy applies only to our website, so if you click
+        on a link to another website, you should read their privacy policy.</p>
+      <h3>Changes to our privacy policy</h3>
+      <p>We keep our privacy policy under regular review and places any updates on this web page. This privacy policy
+        was last updated on 20 January 2020.</p>
+      <h3>How to contact us</h3>
+      <p>If you have any questions about&nbsp;our privacy policy, the data we hold on you, or you would like to exercise
+        one of your data protection rights, please do not hesitate to contact us.</p>
+      <p>Email us at: nn@nn.com</p>
+      <h3>How to contact the appropriate authority</h3>
+      <p>Should you wish to report a complaint or if you feel that we has not addressed your concern in a satisfactory
+        manner, you may contact me.</p>
+      <p>Email: nn.nn.com</p>
+      </p>
+      <div id="checkbox">
+        <input type="checkbox" id="read-terms-checkbox">
+        <label for="read-terms-checkbox" style="color: black;">I have read and understood terms and conditions.</label>
+      </div>
+    </div>
+  </div>
+  <div class=" w3-row-padding" style="margin-top: 30px;">
+    <center>
+      <div class="w3-third">
+        <img src="IMG/pexels-george-morina-4905523.jpg" class="toggle-trigger" alt="Image 1">
+        <!-- Kopplar elementet till en toggle funktion -->
+        <div class="toggle-info">
+          <h2>London</h2>
+          <p>London, the capital of England and the United Kingdom, is a 21st-century city with history stretching
+            back
+            to Roman times. At its centre stand the imposing Houses of Parliament, the iconic ‘Big Ben’ clock
+            tower
+            and
+            Westminster Abbey, site of British monarch coronations. Across the Thames River, the London Eye
+            observation
+            wheel provides panoramic views of the South Bank cultural complex, and the entire city. London has
+            alot
+            to
+            offer wether you're looking to relax, go shopping at the famous Oxford street, or do you think you
+            have
+            what
+            it takes to party like a Brit? Then you should definately take a tour in London's rich night life.</p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <img src="IMG/denys-nevozhai-UzagqG756OU-unsplash.jpg" class="toggle-trigger" alt="Image 2">
+        <div class="toggle-info">
+          <h2>Paris</h2>
+          <p>Paris, France's capital, the city of Love and Fashion, and with it's rich cuisine-culture, Paris
+            simply
+            has
+            it all, it is a major European city and a global center for art, fashion, gastronomy and culture. Its
+            19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks
+            as
+            the
+            Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture
+            and
+            designer boutiques along the Rue du Faubourg Saint-Honoré</p>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <img src="IMG/pexels-aleksandar-pasaric-2339009.jpg" class="toggle-trigger" alt="Image 2">
+        <div class="toggle-info">
+          <h2>Tokyo</h2>
+          <p>Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to
+            historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding
+            woods.
+            The
+            Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from
+            classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo
+            Museum).
+          </p>
+        </div>
+      </div>
+    </center>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="footer w3-container w3-opacity-min w3-black">
+    <a href="contactform.html">Contact</a>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Länkar filen till jQuery bibliotek -->
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+    <link rel="stylesheet" href="CSS/myStyle.css">
+    <script src="/myjQuery/my_jquery_functions.js"></script>
+    <!-- Länkar filen till filen där min jQuery och Java Script fil -->
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="travelplanner.html">Travelplanner</a>
+        <a href="cities.html">Cities Bucketlist</a>
+        <a href="favorites1.html">Favorites 1</a>
+        <a href="favorites2.html">Favorites 2</a>
+        <a href="contact.html">Contact</a>
+        <a href="moment4.html" class="active">Contact Form</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="w3-container w3-black w3-opacity">
+        <h1>Contact</h1>
+    </div>
+    <br>
+    <div class="w3-row-padding">
+        <div class="w3-content" id="formQuestion1">
+            <fieldset style="width: 45%" ;>
+                <legend>Your coordinates please</legend>
+                <form>
+                    <!-- I det här formuläret fyller användaren i sina uppgifter, fälten r obligatoriska och formuläret kan ej skickas iväg om inte allt är korrekt ifyllt -->
+                    <label for="txtName">Name: <span>*</span></label> <br>
+                    <!-- Här matar användaren in sitt namn, om fältet lämnas tomt blir det rödmarkerat och ett felmeddelande skrivs ut med en alert -->
+                    <input type="text" id="txtName" placeholder="Your name" required /><br>
+                    <label for="txtEmail">Email: <span>*</span></label> <br>
+                    <!-- Här matar användaren in sin e-postadress, om fältet lämnas tomt blir det rödmarkerat och ett felmeddelande skrivs ut med en alert -->
+                    <input type="text" id="txtEmail" placeholder="Your email address" required /><br>
+                    <label for="selCity">City: <span>*</span></label> <br>
+                    <select id="selCity" required>
+                        <option selected value="">Choose a city</option>
+                        <!-- Här väljer användaren en valfri stad i listan, om användaren lämnar fältet tomt blir fältet rödmarkerat och ett felmeddelande skrivs ut med en alert -->
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                    </select><br><br>
+                    <label for="msg">Message: <span>*</span></label> <br>
+                    <textarea id="msg" name="msg" placeholder="Your message" style="width:300px;height:100px"
+                        required></textarea><br>
+                        <!-- Här matar användaren in ett valfritt meddelande, om inget meddelande matats in blir fältet rödmarkerat och ett felmeddelande skrivs ut med en alert -->
+                    <input type="button" id="bt" value="Send" onclick="saveFile()" />
+                </form><br>
+                <div style="position: absolute;">
+                    <!-- Här visas aktuellt id:s värde som i det här fallet är 2 olika bild filer;-->
+                    <img id="show" src="/IMG/please.png">
+                    <img id="hide" src="/IMG/thankyou.png">
+
+                </div><br><br><br>
+            </fieldset>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer w3-container w3-opacity-min w3-black">
+        <a href="contactform.html">Contact</a>
+    </div>
+</html>

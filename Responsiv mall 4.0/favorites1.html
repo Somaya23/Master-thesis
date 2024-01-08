@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Favorites 1</title>
+    <link rel="stylesheet" href="CSS/myStyle.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+    <link rel="stylesheet" href="CSS/myStyle3.css">
+    <script src="javascript/myCustomJs.js"></script>
+    <script src="javascript/myScript3a.js"></script>
+</head>
+
+<body>
+    <script>
+        
+    </script>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+    <a href="travelplanner.html">Travelplanner</a>
+    <a href="cities.html">Cities Bucketlist</a>
+    <a href="favorites1.html" class="active">Favorites 1</a>
+    <a href="favorites2.html">Favorites 2</a>
+    <a href="contact.html">Contact</a>
+    <a href="moment4.html">Contact Form</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="w3-container w3-opacity w3-black">
+        <h1>Your favorite travel countries</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="w3-row-padding">
+        <form>
+            <div class="w3-quarter w3-padding">
+                <!-- Här skriver användaren in sitt användarnamn -->
+                <label for="username"><b>Register a user:</b></label>
+                <br>
+                Username:<br>
+                <input type="text" id="username" name="username" placeholder="Enter username" autocomplete="username" /> <br>
+                <br>
+            </div>
+            <!-- Här kan användaren välja sina favoritländer -->
+            <div class="w3-quarter w3-padding">
+                <label for="countrySelect"><b>Choose country:</b></label>
+                <br>
+                <select id="countrySelect" name="countrySelect" size="4" multiple>
+                    <option value="England">England</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Italy">Italy</option>
+                    <option value="USA">USA</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Japan">Japan</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Kroatia">Kroatia</option>
+                </select>
+                <br>
+                <br>
+                <!-- Knapp som ativerar funktionen i myFavorites som lägger valt land i en lista -->
+                <button type="button" onclick="myFavorites()">Add a List</button>
+                <br>
+                <br>
+            </div>
+        </form>
+
+        <!-- Här skrivs användarens lista ut -->
+        <div class="w3-quarter w3-padding">
+            <b name="changeHead">My favorite list:</b>
+            <!-- Skriver ut "Usernam's favorite list" när användaren påbörjat sin lista -->
+            <div name="list"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer w3-container w3-opacity-min w3-black">
+        <a href="contactform.html">Contact</a>
+    </div>
+</body>
+
+</html>

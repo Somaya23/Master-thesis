@@ -1,0 +1,26 @@
+body {
+    background-image: url(/IMG/pexels-asad-photo-maldives-457876.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.citiesbucketlist {
+    margin-left: 10%;
+}
+
+#City {
+    float: left;
+    width: 150px;
+    margin: 30px 15px 0 0;
+}
+
+#rating-slider {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  #rating-value {
+    margin-top: 10px;
+  }
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Form</title>
+    <link rel="stylesheet" href="CSS/myStyle.css" type="text/css">
+    <link rel="stylesheet" href="pexels-quintin-gellar-313782.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+    <script src="javascript/myCustomJs.js"></script>
+    <script src="javascript/myScript2.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="travelplanner.html">Travelplanner</a>
+        <a href="cities.html" class="active">Cities Bucketlist</a>
+        <a href="favorites1.html">Favorites 1   </a>
+        <a href="favorites2.html">Favorites 2</a>
+        <a href="contact.html">Contact</a>
+        <a href="moment4.html">Contact Form</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+    </div>
+
+    <div class="w3-container w3-opacity w3-black">
+        <h1>Survey</h1>
+        <p>What is your favorite City?</p>
+    </div>
+
+    <fieldset style="width: 35%; height: 100%;">
+        <legend>My cities</legend>
+        <form action="">
+            <label for="city">City</label><br>
+            <input type="text" id="inputCity" name="city" placeholder="Enter city here"
+                onkeydown="updateCityInfo(this) ">
+            <!-- Inmatningsfält där användaren skriver in städer -->
+            <button type="button" onclick="addCity()">Add City</button><br>
+            <!-- Knapp lägger till inmatade staden i formuläret -->
+            <span id="error" style="color: red;"></span> <!-- Specifierar inställningar för ett span-element -->
+
+            <br><br><br>
+            <label for="city">Cities:</label><br>
+            <!-- textarea fungerar som en behållare som tar emot input och skriver ut den i en text-ruta, disabled-elementet låser text-rutan från manuell inmatning,
+                det är även här man lägger in required om man vill göra ett inmatningfält obligatoriskt, på så sätt tvingas användaren att fylla i fältet.
+                onfocus-elementet tillåter cityInfo att hämta information om inmatad stad för att kunna skriva ut "stadsinformationen" när en ny stad lagts till -->
+            <textarea id="city1" name="city" cols="" rows="1" class="citiesbucketlist" onfocus="updateCityInfo(this)"
+                disabled></textarea>
+            <textarea id="city2" name="city" cols="" rows="1" class="citiesbucketlist" onfocus="updateCityInfo(this)"
+                disabled></textarea>
+            <textarea id="city3" name="city" cols="" rows="1" class="citiesbucketlist" onfocus="updateCityInfo(this)"
+                disabled></textarea>
+            <textarea id="city4" name="city" cols="" rows="1" class="citiesbucketlist" onfocus="updateCityInfo(this)"
+                disabled></textarea>
+            <textarea id="city5" name="city" cols="" rows="1" class="citiesbucketlist" onfocus="updateCityInfo(this)"
+                disabled></textarea><br>
+
+            <button type="button" onclick="sortCities()" class="citiesbucketlist">Sort Cities</button>
+            <!-- Knapp för att sortera städerna i formuläret i bokstavsordning -->
+
+            <button type="button" onclick="resetForm()">Reset Form</button><!-- Knapp för att återställa formuläret -->
+
+            <br><br><!-- <br> Skapar en tom rad -->
+            <p id="cityInfo"></p> <!-- Behållaren där "stadsinformationen" skrivs ut -->
+
+            <p id="cityCount">No cities added yet.</p> <!-- Behållaren där antalet inmatade städer skrivs ut -->
+            <br>
+        </form>
+    </fieldset>
+
+    <div class="footer w3-container w3-opacity-min w3-black">
+        <a href="contactform.html">Contact</a>
+      </div>
+</body>
+
+</html>

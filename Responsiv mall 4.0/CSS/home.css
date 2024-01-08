@@ -1,0 +1,57 @@
+#terms-dialog-content {
+    max-height: 70vh;
+    /* Sätter en maxhöjd för dialogen */
+    overflow-y: auto;
+    /* Tillåt vertikal rullning */
+
+  }
+
+  #checkbox {
+    text-align: left;
+    border: 1px solid rgb(40, 40, 40);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .error-checkbox {
+    border: 1px solid red;
+  }
+
+  .toggle-info {
+    display: none; /* Döljer toggle innehållet när sidan öppnas */
+  }
+
+  IMG {
+    height: 300px;
+    width: 320px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px 2px rgb(52, 30, 3);
+  }
+
+  #sortable {
+    list-style-type: decimal;
+    padding: 0;
+    margin: 50px;
+  }
+
+  /* Stylar list-elementen*/
+  #sortable li {
+    margin: 5px;
+    /* Lägger till mellanrum mellan raderna */
+    padding: 10px;
+    border-radius: 50px;
+    /* rundar hörnen på listraderna */
+    width: 200px;
+    background: transparent;
+    /* Lägger till en genomskinlig bakgrund */
+    cursor: move;
+    color: white;
+    backdrop-filter: blur(10px);
+    /* Gör så att bakrunden blir blurred */
+  }
+
+  #sortable span {
+    cursor: move;
+  }

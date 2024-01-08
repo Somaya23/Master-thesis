@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Mall.CSS</title>
+    <link rel="stylesheet" href="CSS/myStyle.css" type="text/css">
+    <link rel="stylesheet" href="pexels-quintin-gellar-313782.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/myCustom.css">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="travelplanner.html">Travelplanner</a>
+        <a href="cities.html">Cities Bucketlist</a>
+        <a href="favorites1.html">Favorites 1</a>
+        <a href="favorites2.html">Favorites 2</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="moment4.html">Contact Form</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+    </div>
+
+    <div class="w3-container w3-black w3-opacity">
+        <h1>Survey</h1>
+        <p>What is your favourite City?</p>
+    </div>
+    <div class="w3-row-padding">
+        <div class="w3-third">
+            <!-- här anges sidans först kolumn som är det obligatoriska formuläret som måste fyllas i för att formuläret ska kunna skickas.
+            Samtliga delar i formuläret måste vara korrekt ifyllda för att formuläret ska kunna skickas. -->
+            <form id="form1" name="form1" method="post" action="mailto:somaya.e78@gmail.com">
+                <!-- form-attributet method anger vad metoden ska göraHTTP metoden som skall användas, action anger vad som ska göras när formuläret skickas, i det här fallet skall det skickas till mail-adressen som står angiven.
+                "mailto" aktiverar datorns standard e-postklient för att skicka ett meddelande. -->
+                <fieldset style="width: 100%;">
+                    <legend>Contact details</legend>
+                    <label for="name">First name: <span>*</span></label> <br>
+                    <input type="text" name="name" id="name" placeholder="first name" required /> <br>
+                    <!--typen text anger att det är text som kommer skrivas in i input-rutan, placeholder är precis vad det låter som, en text som visas i input rutan tills användaren fyllt i. -->
+                    <label for="surame">Surname: <span>*</span></label> <br>
+                    <input type="text" name="surname" id="surname" placeholder="surname" required /> <br>
+                    <label for="epost">E-mail: <span>*</span></label> <br>
+                    <input type="email" name="epost" id="epost" placeholder="e-mail@adress.com" required /> <br>
+                    <!-- typen "email" tvingar användaren att skriva in e-post adress i ett korrekt format. -->
+                </fieldset>
+                <br>
+                <fieldset style="width: 100%">
+                    <label for="meddelande">What is your next travel destination?:</label> <br>
+                    <textarea name="meddelande" id="meddelande" cols="30" rows="5" placeholder="Type here..."
+                        required></textarea> <br>
+                    <!-- textarea skapar en textruta där en text kan skrivas in av användaren
+                    med en placeholder skrivs en tillfällig text i formulärets inmatningsrutor
+                    rows anger antalet höjden på meddelande rutan, cols anger meddelande rutans bredd. -->
+                </fieldset>
+                <br>
+                <fieldset style="width: 100%;"> <!-- med fieldset skapar vi en "ram" runtom radioknapparna. -->
+                    <legend>Favourite city</legend>
+                    <input type="radio" name="favouritecity" id="london" value="london" required />
+                    <label for="london">London</label> <br>
+                    <!-- typen radio innebär att endast ett av alternativen kan markeras som valt.
+                    for-attributet binder ihop fält med label med for, name och id egenskaperna. -->
+                    <input type="radio" name="favouritecity" id="paris" value="paris" required />
+                    <label for="paris">Paris</label> <br>
+                    <input type="radio" name="favouritecity" id="tokyo" value="tokyo" required />
+                    <label for="tokyo">Tokyo</label> <br>
+                    <input type="radio" name="favouritecity" id="other" value="other" required />
+                    <label for="other">Other</label>
+                </fieldset>
+                <br>
+        </div>
+
+
+        <div class="w3-third"> <!-- här anges kolumn nummer 2-->
+            <fieldset style="width: 100%;">
+                <legend>Question 1</legend>
+                <p>What is your date of birth:</p>
+                <label for="birthdate"></label>
+                <input type="date" name="birthdate" id="birthdate" />
+                <!-- typen "date" gör så att användaren kan skriva in ett datum eller välja ett datum ur kalendern. -->
+            </fieldset>
+            <br>
+            <fieldset style="width: 100%;">
+                <legend>Question 2</legend>
+                <p>What is your middlename?</p>
+                <input type="middlename" name="middlename" id="middlename" placeholder="Middlename" />
+                <!-- denna input skapar en ruta där användaren kan skriva in egen text. -->
+                <br>
+            </fieldset>
+            <br>
+            <fieldset style="width: 100%;"> <!-- grupperar datan i formuläret, kan även ange formulärets bredd. -->
+                <legend>Question 3</legend> <!-- skapar en ram runt formulärets data -->
+                <p>What is your favourite season?</p>
+                <input type="radio" name="favourite season" id="spring" value="spring" />
+                <!-- skapar radioknapp för ett alternativ-->
+                <label for="var">Spring</label> <br>
+                <!-- med label skrivs etiketten ut bredvid radioknappen, <br> påbörjar sedan en ny rad-->
+                <input type="radio" name="favourite season" id="summer" value="summer" />
+                <label for="sommar">Summer</label> <br>
+                <input type="radio" name="favourite season" id="autumn" value="autumn" />
+                <label for="host">Autumn</label> <br>
+                <input type="radio" name="favourite season" id="winter" value="winter" />
+                <label for="vinter">Winter</label>
+                <br>
+            </fieldset>
+            <br>
+        </div>
+
+        <div class="w3-third"> <!-- detta anger vår tredje kolumn i sidan-->
+            <fieldset style="width: 100%;">
+                <legend>Question 4</legend>
+                <p>You're going to a desert island and you can only bring three items, what do you bring?</p>
+                <input type="text" name="desert island" id="desert island" placeholder="first item"><br><br>
+                <input type="text" name="desert island" id="desert island" placeholder="second item"><br><br>
+                <input type="text" name="desert island" id="desert island" placeholder="third item">
+                <br>
+            </fieldset>
+            <br>
+            <fieldset style="width: 100%;">
+                <legend>Question 5</legend>
+                <p>Where did you attend elementary school?</p>
+                <label for="school"></label>
+                <input type="text" name="school" id="school" placeholder="Elementary school" />
+                <br>
+            </fieldset>
+        </div>
+        <br>
+        <p>&nbsp &nbsp <input type="submit" name="send" id="send" value="Send" /></p>
+        <!-- typen submit innebär att formuläret kommer att skickas enligt det action som angivits i form-taggen "action" i form-taggen kolumn. Value attributet specifierar värdet av ett "input"-element, värdet "Send" definierar knappens text. -->
+        </form>
+        <br>
+    </div>
+
+    <div class="footer w3-container w3-opacity-min w3-black">
+        <a href="contactform.html">Contact</a>
+      </div>
+
+</body>
+
+</html>

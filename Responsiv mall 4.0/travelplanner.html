@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive mall 4.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/CSS/myCustom.css">
+  <link rel="stylesheet" href="/CSS/myStyle.css">
+  <link rel="stylesheet" href="/CSS/travelplanner.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/javascript/myCustomJs.js"></script>
+  <script src="myjQuery/tpjQueryUI.js"></script> <!-- Hämtar mitt script -->
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="travelplanner.html" class="active">Travelplanner</a>
+    <a href="cities.html">Cities Bucketlist</a>
+    <a href="favorites1.html">Favorites 1</a>
+    <a href="favorites2.html">Favorites 2</a>
+    <a href="contact.html">Contact</a>
+    <a href="moment4.html">Contact Form</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- Kopplas som click element till jQuetyUI-funktionen toggle -->
+  <div class="w3-container w3-black w3-opacity" id="dreams">
+    <h1>We make dreams come true</h1>
+  </div>
+  <!-- Kopplas med id "dreamsContent" till jQueryUI-funktionen toggle med-->
+  <div class="w3-quarter w3-black w3-opacity" id="dreamsContent"
+    style="text-align: center; border: 1px solid white; border-radius: 12px; margin-left: 8px; margin-bottom: 20px;">
+    <p><strong>By filling in our travelplanner tool,<br>
+        we will help you tailor your dream-vacation all in one booking.<br>
+        Submit the form and we will get back to you within 72 hours.<br>
+        Let us make your dream come true!</strong><br>
+        <b style="font-size: small; font-weight: lighter;">(Click on the header to hide me!)</b></p>
+  </div>
+
+  <div class="w3-row-padding" style="margin-top: 30px">
+    <div class="w3-quarter"
+      style="border: 2px solid #fff; border-radius: 16px; backdrop-filter: blur(10px); padding: 20px;">
+      <h4>
+        <center>Choose your preferences</center>
+      </h4>
+      <!-- Här finns en datepicker funktion för utresa -->
+      <label for="datepicker1">Departure:</label>
+      <br>
+      <input type="text" id="datepicker1">
+      <br>
+      <!-- Här finns en till datepicker-funktion för återresa -->
+      <label for="datepicker2">Return:</label>
+      <br>
+      <input type="text" id="datepicker2">
+      <br>
+      <br>
+      <!-- Slider för prisklass -->
+      <div>
+        <label for="price-slider" class="slider-label" aria-labelledby="price-slider">Choose Price Range:</label>
+        <div id="price-slider"></div>
+        <span id="price-value">0 - 100000</span>
+      </div>
+
+      <!-- Slider för antal resenärer -->
+      <div>
+        <label for="travelers-slider" class="slider-label" aria-labelledby="price-slider">Number of
+          Travelers:</label>
+        <div id="travelers-slider"></div>
+        <span id="travelers-value">1 - 10</span>
+      </div>
+      <br>
+      <p>What's your preference:</p>
+      <!-- Radio-knapps altenativ för önsad rese-typ-->
+      <input type="radio" id="sightseeing" name="sightseeing">
+      <label for="sightseeing">Sightseeing</label><br>
+      <input type="radio" id="party" name="party">
+      <label for="party">Party</label><br>
+      <input type="radio" id="relax" name="relax">
+      <label for="relax">Relaxation</label><br>
+      <input type="radio" id="romance" name="romance">
+      <label for="romance">Romance</label><br>
+      <input type="radio" id="adventure" name="adventure">
+      <label for="adventure">Adventure</label><br>
+      <input type="radio" id="sunfun" name="sunfun">
+      <label for="sunfun">Fun in the Sun</label>
+      <br>
+      <br>
+      <p>Choose your preference</p>
+      <!-- Check-box för önskad(e) reseformer -->
+      <input type="checkbox" name="val1" id="val1" value="allinclusive" />
+      <label for="val1">All inclusive</label><br>
+      <input type="checkbox" name="val2" id="val2" value="flight+hotel" />
+      <label for="val2">Flight & Hotel</label><br>
+      <input type="checkbox" name="val3" id="val3" value="flight" />
+      <label for="val3">Flight</label><br>
+      <input type="checkbox" name="val4" id="val4" value="hotel" />
+      <label for="val4">Hotel</label><br>
+      <input type="checkbox" name="val5" id="val5" value="unspecified" />
+      <label for="val5">Unspecified</label><br>
+      <input type="checkbox" name="val6" id="val6" value="boatcruise" />
+      <label for="val6">Boat Cruise</label><br>
+    </div>
+
+    <div class="w3-quarter"
+      style="border: 2px solid #fff; border-radius: 16px; backdrop-filter: blur(10px); padding: 20px; margin-left: 30px;">
+      <!-- En valbar lista för användarens önskade resemål -->
+      <ol id="selectable">
+        <h4 style="text-align: center;">Choose your dream location/locations</h4>
+        <h6 style="text-align: center;">(Hold Ctrl-key to choose multiple cities)</h6>
+        <li class="ui-widget-content">Tokyo</li>
+        <li class="ui-widget-content">Honolulu</li>
+        <li class="ui-widget-content">Sydney</li>
+        <li class="ui-widget-content">Miami</li>
+        <li class="ui-widget-content">Paris</li>
+        <li class="ui-widget-content">Kingston</li>
+        <li class="ui-widget-content">Goa</li>
+        <li class="ui-widget-content">London</li>
+        <li class="ui-widget-content">Zanzibar</li>
+        <li class="ui-widget-content">Rio De Janeiro</li>
+        <li class="ui-widget-content">Shanghai</li>
+        <li class="ui-widget-content">Barcelona</li>
+        <li class="ui-widget-content">Havana</li>
+        <li class="ui-widget-content">Casablanca</li>
+        <li class="ui-widget-content">Hamburg</li>
+        <li class="ui-widget-content">Manila</li>
+      </ol>
+    </div>
+    <div class="w3-third"
+      style="border: 2px solid #fff; margin-left: 30px; border-radius: 16px; backdrop-filter: blur(10px); padding: 20px;">
+      <fieldset style="width: 100%;">
+        <legend>Contact details</legend>
+        <label for="name">First name: <span>*</span></label> <br>
+        <input type="text" name="name" id="name" placeholder="First name" required autocomplete="name" /> <br>
+        <!--typen text anger att det är text som kommer skrivas in i input-rutan, placeholder är precis vad det låter som, en text som visas i input rutan tills användaren fyllt i. -->
+        <label for="surame">Surname: <span>*</span></label> <br>
+        <input type="text" name="surname" id="surname" placeholder="Surname" required /> <br>
+        <label for="epost">E-mail: <span>*</span></label> <br>
+        <input type="email" name="epost" id="epost" placeholder="e-mail@adress.com" required /> <br>
+        <!-- typen "email" tvingar användaren att skriva in e-post adress i ett korrekt format. -->
+      </fieldset>
+      <br>
+      <fieldset style="width: 100%">
+        <label for="meddelande">Let us know if you have any specific wishes or needs:</label> <br>
+        <textarea name="meddelande" id="meddelande" cols="30" rows="5" placeholder="Type here..." required
+          style="border-radius: 12px;"></textarea>
+        <br>
+        <!-- textarea skapar en textruta där en text kan skrivas in av användaren
+              med en placeholder skrivs en tillfällig text i formulärets inmatningsrutor
+              rows anger antalet höjden på meddelande rutan, cols anger meddelande rutans bredd. -->
+      </fieldset>
+    </form>
+      <button id="subbtn" class="sub-btn">Submit</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="footer w3-container w3-opacity-min w3-black">
+    <a href="contactform.html">Contact</a>
+  </div>
+
+</body>
+
+</html>
